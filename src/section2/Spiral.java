@@ -20,6 +20,26 @@ public class Spiral {
 			// 2. Turn the robot 360/7 degrees to the right
 		
 			// 8. Set the pen width to i
+		
+		
+		Robot r = new Robot();
+		
+		r.penDown();
+		
+		r.setSpeed(500);
+		
+		for (int x = 0; x < 75; x++) {
+			
+			r.setRandomPenColor();
+			
+			r.move(5*x);
+			r.turn(360/7);
+			r.setPenWidth(x);
+				
+		}
+		
+		
+		
 			
 	}
 }
