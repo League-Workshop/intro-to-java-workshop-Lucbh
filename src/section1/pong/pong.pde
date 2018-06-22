@@ -4,6 +4,9 @@ int yPos = 500;
 int xDirection = 5;
 int yDirection = 3;
 
+int px = 800;
+
+
 
 void setup() {
   size(1000,1000);
@@ -18,11 +21,25 @@ void draw() {
   background(100);
   
   fill(255,0,0);
-  rect(800,mouseY,100,200);
+  rect(px,mouseY,50,200);
   
   
   fill(0,0,255);
   ellipse(xPos,yPos,100,100);
+  
+  
+  if (xPos + 50 > px && yPos > mouseY && yPos < mouseY + 200) {
+    
+    xDirection = xDirection*-1;
+    
+  }
+  
+  if (yPos + 50 > mouseY + 200 && yPos + 50 < mouseY + 200 && yPos + 50 > xPos && yPos + 50 < yPos + 50) {
+    
+    yDirection = yDirection*-1;
+    
+  }
+  
   
 }
 
